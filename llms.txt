@@ -73,7 +73,7 @@ You can install optional features using the `pip install "chonkie[feature]"` syn
 | :--------- | :------------------------------------------------------------------------------------------------------ |
 | `hub`      | Interact with the Hugging Face Hub for models and configurations. Required to access `from_recipe` options in Chunkers. |
 | `viz`      | Enables the `Visualizer` which allows for cool visuals on the terminal and HTML output.                 |
-| `code`     | Required for `CodeChunker`. Installs `tree-sitter` and `magika`.                                        |
+| `code`     | Required for `CodeChunker`. Installs `tree-sitter-language-pack`.                                      |
 |  `model2vec` | Required to leverage `Model2VecEmbeddings` with the semantic and late chunkers.                       |
 | `st`       | Use `sentence-transformers` for generating embeddings, enabling semantic chunking strategies.           |
 | `openai`   | Integrate with OpenAI's API for `tiktoken` token counting and OpenAI embeddings.                        |
