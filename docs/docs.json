@@ -150,7 +150,6 @@
             "group": "Experimental",
             "pages": [
               "oss/experimental/overview",
-              "oss/experimental/code-chunker",
               "oss/experimental/chonkie-cli"
             ]
           },
