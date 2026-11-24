@@ -9,7 +9,7 @@ The `CodeChunker` splits code into chunks based on its structure, leveraging Abs
 ## Overview
 - Supports 165+ languages
 - Powered by [tree-sitter-language-pack](https://github.com/Goldziher/tree-sitter-language-pack)
-- Auto language detection via [Magika](https://github.com/google/magika), a language detection library made by Google
+- Auto language detection via shebang detection, falling back to trial-parsing the code with the available tree-sitter grammars
 
 ## Supported Languages
 
@@ -126,7 +126,7 @@ chunker = CodeChunker(
 from chonkie import CodeChunker
 
 chunker = CodeChunker(
-    language="auto",        # Auto detects programming language via Magika
+    language="auto",        # Auto detects programming language
     tokenizer="character",  # Default tokenizer (or use "gpt2", etc.)
     chunk_size=2048,        # Maximum tokens per chunk
     include_nodes=False     # Optionally include AST nodes in output
@@ -148,7 +148,7 @@ chunker = CodeChunker(
 </CodeGroup>
 
 <Note>
-Automatic language detection using Magika can impact performance. For best results, specify the language directly via the `language` parameter.
+Automatic language detection can impact performance, as it may trial-parse the code with every available grammar. For best results, specify the language directly via the `language` parameter.
 </Note>
 
 ## Parameters
